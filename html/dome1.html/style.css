@@ -1,0 +1,18 @@
+*{
+    margin:0;
+}
+.page
+{
+    padding:50px 20px;
+}
+.title
+{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: serif '微软雅黑';
+}
+.content
+{
+    padding: 20px;
+    box-shadow: 0px 0px 16px chocolate;
+}
