@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  font-size: 30px;
+}
+section {
+  margin-bottom: 0.667rem;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card {
+  padding: 1rem;
+  background-color: #f5fafe;
+}
+.card-wrapper {
+  width: 100%;
+  font-size: 0;
+}
+.card-wrapper .user-info {
+  width: 100%;
+}
+.card-wrapper .user-info__pic {
+  width: 100%;
+}
+.card-wrapper .user-info img {
+  width: 100%;
+}
+.card-wrapper__desc {
+  padding: 0.333rem 0.667rem;
+}
+.card-wrapper__desc .name {
+  font-size: 1rem;
+  color: #010101;
+}
+.card-wrapper__desc .name .sex {
+  width: 0.67rem;
+  height: 0.6rem;
+  display: inline-block;
+  background-image: url("./img/");
+  background-size: countian;
+  background-repeat: no-repeat;
+}
+.card-wrapper__desc .tag {
+  font-size: 0.05rem;
+}
+.history {
+  padding: 0.5rem 0.667rem;
+}
+.history-pic img {
+  width: 2rem;
+  margin-right: 0.333rem;
+  border-radius: 50%;
+}

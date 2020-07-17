@@ -1,0 +1,40 @@
+<view class="container" >
+    <scroll-view scroll-y style="height:100%">
+    <view class="header">
+        <view class="header-hd">
+            <text>南昌</text>
+            <view class="downtips"></view>
+        </view>
+        <view class="header-bd">
+           <view class="header-bd-hot header-bd-btn" style="color:{{isLeft?'#ef4238':'#666'}}"  bindtap="tapChangeHot">正在热映</view>
+            <view class="header-bd-wait header-bd-btn" style="color:{{isLeft?'#666': '#ef4238'}}" bindtap="tapChangeWaiting">即将上映</view>
+            <view class="bottomLine" style="left:{{isLeft?'73px':'143px'}}"></view>
+        </view>
+        <view class="header-ft">
+            <image src="../../images/fdj.png" alt=""></image>
+        </view>
+    </view>
+    <swiper indicator-dots="{{indicatorDots}}"  autoplay="{{autoplay}}" interval="{{interval}}">
+        <swiper-item  >
+            <image class="slide-image"  width="355" height="150" src="https://p1.ssl.qhimg.com/dr/705_705_/t01a7aee086b2719c58.png" />
+        </swiper-item>
+        <swiper-item class="" item-id="">
+            <image class="slide-image" width="335" height="150" src="https://p1.ssl.qhimg.com/t01314068a2a1e65c0d.jpg" />
+        </swiper-item>
+    </swiper>
+    
+    <!-- <view vx:for=“{{movieList}}" >
+        <view class="flex item" >
+            <view class="item_left">
+                <image src="{{}}" />
+            </view>
+            <view class="itme_middle">
+                1234
+            </view>
+            <view class="itme_right">
+                45678
+            </view> -->
+        </view>
+    </view>
+    </scroll-view>
+</view>

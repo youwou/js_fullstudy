@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mycanvas{
+            border-radius: ;
+        }
+    </style>
+</head>
+<body>
+    <canvas id = "mycanvas"></canvas>
+    <script>
+        var c = document.getElementById('mycanvas') 
+        var ctx = c.getContext("2d")
+        ctx.fillStyle = 'red'  
+        ctx.filRect(0,0,300,300)
+        ctx.clearRect(20,20,150,150)
+    </script>
+</body>
+</html>
