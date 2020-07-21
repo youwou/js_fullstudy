@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no viewport-fit=cover"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no viewport-fit=cover"> -->
+    
+    <title>Document</title>
+    <script>
+        var ratio = 1 / window.devicePixelRatio;
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'initial-scale=' + ratio;
+        var head = document.querySelector('head');
+        head.appendChild(meta);
+        //先把屏幕等分成十份：1erm = 屏幕宽度 / 10
+        var width = (window.innerWidth ) / 10
+        var html = document.querySelector("html");
+        //每一份就是1rem （因为 font-size 就是1rem ）
+        // debugger
+        // html.style.fontSise = width + 'px'; // 1rem = 
+        html.style.fontSize = width + 'px'
+    </script> 
+    <style>
+         html{
+            margin: 0;
+            padding: 0;
+        } 
+        input{
+            height: 0.766667rem;
+            width: 5.92rem;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text">
+    </div>
+</body>
+</html>

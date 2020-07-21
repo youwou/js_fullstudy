@@ -1,4 +1,4 @@
-body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote {
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote{
   margin: 0;
   padding: 0;
 }
@@ -70,6 +70,7 @@ text-decoration: none;
 #anony-nav .anony-nav-links li .lnk-group{
   background-position:-180px;
 }
+
 #anony-nav .anony-nav-links li .lnk-read{
   background:transparent url(https://img3.doubanio.com/f/sns/f3ba00ef46f185989b70ac6841d9f4d67b6e3a25/pics/sns/anony_home/ic_read_home_nav.png) no-repeat
   100% 100%;
@@ -174,3 +175,54 @@ a{
   color:transparent;
   cursor:pointer;
 }
+
+
+
+.wrapper {
+  width: 950px;
+  margin: 0 auto;
+}
+#anony-reg-new .wrapper {
+  position: relative;
+  padding: 0 0 4px;
+  overflow:visible;
+  zoom:1;
+}
+#anony-reg-new .wrapper::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: 0 --150px;
+}
+#anony-reg-new .login{
+  width: 300px;
+  float: right;
+  font-size: 0;
+
+}
+#anony-reg-new .wrapper .login{
+  z-index: 2;
+}
+#anony-reg-new .wrapper .login{
+  position: relative;
+}
+#anony-reg-new .app{
+  position: absolute;
+  height: 120px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0  auto 475px;
+}
+#anony-reg-new .wrapper .app{
+  z-index: 2;
+}
+#anony-reg-new .wrapper:after{
+  content:"\0020";
+  display:block;
+  clear: both;
+} 

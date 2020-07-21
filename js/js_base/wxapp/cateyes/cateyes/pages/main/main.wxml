@@ -14,26 +14,24 @@
             <image src="../../images/fdj.png" alt=""></image>
         </view>
     </view>
-    <swiper indicator-dots="{{indicatorDots}}"  autoplay="{{autoplay}}" interval="{{interval}}">
-        <swiper-item  >
-            <image class="slide-image"  width="355" height="150" src="https://p1.ssl.qhimg.com/dr/705_705_/t01a7aee086b2719c58.png" />
-        </swiper-item>
-        <swiper-item class="" item-id="">
-            <image class="slide-image" width="335" height="150" src="https://p1.ssl.qhimg.com/t01314068a2a1e65c0d.jpg" />
+    <swiper indicator-dots="{{indicatorDots}}"  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+        <swiper-item wx:for="{{imgUrls}}" wx:key="index">
+            <image class="slide-image"  width="355" height="150" src="{{item}}" />
         </swiper-item>
     </swiper>
     
-    <!-- <view vx:for=“{{movieList}}" >
+    <view wx:for="{{movieList}}" wx:key="{{index}}">
         <view class="flex item" >
             <view class="item_left">
-                <image src="{{}}" />
+                <image src="{{item.imgUrl}}" />
             </view>
-            <view class="itme_middle">
-                1234
+
+            <view class="item_middle">
+                
             </view>
-            <view class="itme_right">
-                45678
-            </view> -->
+            <view class="item_right">
+                按钮
+            </view> 
         </view>
     </view>
     </scroll-view>

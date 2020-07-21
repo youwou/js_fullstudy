@@ -1,0 +1,18 @@
+
+
+<!-- 这两者不是简单的标签，是系统提供的组件 60%-70&的东西都不需要自己做 -->
+<!-- <progress percent="80" stroke-width="12" /> -->
+<!-- <map id="map" 
+longitude="115.834895" latitude="28.720513"   
+scale="18"
+markers="{{markers}}"
+show-location
+style="width: 100%; height: 61.5vh;"></map> -->
+<loading hidden="{{isHidden}} ">数据加载中</loading>
+<!-- <view calss="wapper">
+  <view class="group"  wx:for"{{}}" wx:for-item="{{}}">
+    
+  </view>
+    
+</view>
+   -->
