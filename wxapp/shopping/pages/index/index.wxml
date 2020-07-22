@@ -49,7 +49,10 @@
                           
                     </view>
                 </navigator>
-                  <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+                  
+            </view>
+            <view class="newest-list">
+                <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
                     <image src="/image/s4.png"  />
                     <view class="newest-name">
                         <text>青菜 100g</text>

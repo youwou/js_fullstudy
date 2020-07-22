@@ -182,6 +182,13 @@ a{
   width: 950px;
   margin: 0 auto;
 }
+#anony-reg-new{
+  margin-bottom: 25px;
+  background-size: contain;
+  background-position:calc(50% - 305px)top;
+  background-repeat: no-repeat;
+  background-color: #edf4ed;
+}
 #anony-reg-new .wrapper {
   position: relative;
   padding: 0 0 4px;
@@ -197,7 +204,7 @@ a{
   right: 0;
   z-index: 0;
   background-repeat: no-repeat;
-  background-position: 0 --150px;
+  background-position: 0 -150px;
 }
 #anony-reg-new .login{
   width: 300px;
@@ -226,3 +233,59 @@ a{
   display:block;
   clear: both;
 } 
+#anony-reg-new .app-title{
+  margin: 7px 0;
+  font-size: 25px;
+  color:#111;
+  line-height: 24px;
+  -webkit-font-smoothing:antialiased;
+  text-rendering: optimizeLegibility;
+}
+#anony-reg-new .lnk-app {
+  display: inline-block;
+  zoom: 1;
+  padding: 9px 21px;
+  margin-right: 2px;
+  vertical-align: top;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 1;
+}
+#anony-reg-new .lnk-app:link, 
+#anony-reg-new .lnk-app:visited{
+  background-color: #00b51d;
+  color:#fff;
+}
+#anony-reg-new .app-qr{
+  display: inline-block;
+  zoom: 1;
+  position: relative;
+}
+#anony-reg-new .app-qr-expand{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 20px 5px;
+  border-right: 2px ;
+  text-align: center;
+  font-size: 13px;
+  color: #666666;
+  background: #ffffff;
+  line-height: 13px;
+  white-space: nowrap;
+}
+#anony-reg-new .app-slogan{
+  margin: 0 0 18px;
+  font-size: 0;
+  color: #111111;
+  -webit-font-smoothing:antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+
+
+
+
