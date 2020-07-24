@@ -5,9 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
+    carts:[],
+    totalPrice:0,
+    selectAllStatus:false
+
 
   },
+ selectAll(){
+   //来回改变数据源中的selectAllStatus
+   let selectAllStatus = this.data.selectAllStatus
+   selectAllStatus = !selectAllStatus
+   //把cart数据
+   let cart = this.data.carts
+   for (let i = 0; i < carts.length; i++){
+     carts[i].select = selectAllStatus
+   }
+    this.setData({
+        selectAllStatus:selectAllStatus,
+        carts:carts
+      })
+    },
+  selectList(e){
+    // 让当前这条数据里面的selected值取反
+      let index = e.currentTarget.dataset.index;
+      
+    },
+  getTotalPrice( ){
+    //拿到carts数组中的每一条selected为true的数组，用数组乘以价格
+    let carts = this.data,carts
+    for(let i = 0;i < carts.length;i++){
+      if(carts[i].selected){
+        total
 
+      }
+
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
