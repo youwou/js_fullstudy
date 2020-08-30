@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            vertical-align: baseline;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        html{
+            height: 100%;
+
+        }
+        body{
+            height: 100%;
+            overflow: hidden;
+            color: #fff;
+            -webkit-perspective: 1000;
+            -moz-perspective: 1000;
+            -ms-perspective: 1000;
+            -moz-perspective: 1000;
+            perspective: 1000;
+            background-color: #444444;
+            background-image: -webkit-linear-gradient(top ,#444 #999);
+        }
+        .book{
+            width: 300%;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            -webkit-transform: rotateX(60deg);
+            transform: rotateX(60deg);
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        .page{
+            width: 300px;
+            height: 300px;
+            padding: 1em;
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-indent: 2em;
+            overflow: hidden;
+        }
+        .front{
+            background-color: #d93e2d;
+
+        }
+        .back{
+            background-color: #fff;
+        }
+        .front-cover{
+            cursor: move;
+            transform: rotateY(180deg);
+            transform-origin: 0 50%;  /*旋转基点 */
+        }
+        .front-cover .back{
+            background-image:url(https://pic.baike.soso.com/ugc/baikepic2/368/20200529163827-904573541_jpeg_640_480_24885.jpg/0);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            transform: translateZ(3px);
+        }
+        .book-cover .back{
+            transform: translateZ(-3px);
+        }
+        .p3d{
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+        .flip{
+            transform: rotateY(180deg);
+        }
+        .shadw,
+        .dino{
+            width: 196px;
+            height: 132px;
+            position: absolute;
+            left: 60px;
+            top: 60px;
+            transform-origin: 0 100px;
+        }
+        .dino{
+            background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596175690618&di=194ba74a4d0239f999819b6a233ef5da&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3Dc252cd4e0e082838680ddc1c8898a964%2F7a098ecad1c8a7862c3a2c5f6e09c93d70cf5061.jpg)no-repeat;
+            background-size: cover;
+        }
+        .shadow{
+            background-color: rdba(0,0,0,0,5);
+        }
+    </style>
+</head>
+<body>
+    <div class="book p3d">
+        <div class="book-cover p3d">
+            <div class="page back flip"></div>
+            <div class="page front p3d">
+                <div class="shadow"></div>
+                <div class="dino"></div>
+            </div>
+        </div>
+        <div class="front-cover p3d">
+            <div class="page front flip p3d">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum nisl quis nulla eleifend dignissim.
+                    Curabitur varius lobortis tincidunt. Maecenas gravida, nulla quis luctus imperdiet, ipsum nibh consectetur
+                    ante, in sodales massa tortor eget neque. Donec porta ligula massa, id sagittis est. Ut nisl tellus, faucibus
+                    nec feugiat ut, laoreet iaculis felis. Suspendisse ultrices mauris vel tellus suscipit commodo. Integer vitae
+                    tortor erat. Pellentesque non tempor nisi.
+        </p>
+            </div>
+            <div class="page back"></div>
+        </div>
+    </div>
+    <script>
+        (function(window,document) {
+            let prefixes = ['webik','moz','ms','o'],
+            book = document.querySelectorAll('.book') [0],
+            page = document.querySelectorAll('.front-cover') [0],
+            dino = document.querySelectorAll('.dino') [0],
+            shadow = document.querySelectorAll('.shadow') [0],
+            conterPoint = window.innerWidth / 2,
+            hold = false,
+            clamp = function(val,min,max) {
+                return Math.max(min,Math.min(val,max))
+
+            },
+            pageSize = 300
+
+        page.onmousedown = function() {
+            console.log('mousedown')
+            hold = true
+        }
+        //鼠标放开的事件
+        window.onmouseup = function() {
+            console.log('mouseup')
+            if(hold) {
+                hold = false
+            }
+        }
+        //在hold变量为true的时候做翻书的逻辑
+        //鼠标移动的时候执行的事件
+        window.onmousemove = function(evt) {
+            if(!hold){
+                return
+            }
+            console.log(evt.pageX)
+            let angle = clamp((centerPoint - evt.pageX + pageSize) / pageSize * -90,-180,0),i,j;
+            for(i = 0,j = prefixes.length;i < j ; i++) {
+                page.style[prefixes[i] + "Transfrom"] = 'rotateY(&{angle}deg)'
+                dino.style[prefixes[i] + "Transform"] = `rotateX(${angle / 2}deg)`
+          shadow.style[prefixes[i] + "Transform"] = `translateZ(1px) skewX(${angle / 8}deg)`
+            }
+        }
+        })(window,document)
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.common.dev.js"></script>
+    <title>Document</title>
+    <style>
+        .red {color:red }
+        
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- <div v-if="isSure">擦擦水电费</div>
+        <div v-else>阿女萨</div>   -->
+         <!-- <div class="item" v-for="item in people"  :key="index">
+            <p>{{item.name}}-{{item.age}}</p>
+        </div> -->
+
+        <!-- <div class="mag">
+            <span>{{message}}</span><br/>
+            <span v-text="message"></span><br/>
+            <span v-html="newmessage"></span>
+        </div> -->
+
+         <!-- <div class="count">
+            <P>{{count}}</P>
+            <button v-on:click="add">+</button>
+            <button @click='reduce'>-</button>
+        </div>  -->
+
+        <!-- <div class="model">
+            <p>{{message}}</p>
+            <p>
+                v-model:
+                <input type="text" v-model="message">
+            </p>
+        </div> -->
+
+        <!-- <div class="pic">
+            <img v-bind:src="imgSrc" alt="">
+        </div> -->
+        <div @click='change' :class=" isRed ? 'red' : ''" :class="[className1,className2]">范德海德
+
+        </div>
+</div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data :{
+                className1:'active',
+                className2:'wrapper',
+                message:'holle word',
+                newmessage:'<h2>hello word</h2>',
+                isSure:true,
+                isRed:false,
+                list:['a','b','c','d'],
+                people:[
+                    { name:'大', age: 18 },
+                    { name:'中', age: 17 },
+                    { name:'小', age: 16 }
+                ],
+                count:0
+            },
+            methods:{
+                add(){
+                    // console.log('daad')
+                    this.count++
+                },
+                reduce() {
+                    this.count--
+                },
+                change(){
+                    this.isRed = !this.isRed
+                }
+                // imgSrc
+            },
+            beforeCreate() {
+                console.log('beforeCreate')
+            },
+            created() {
+                console.log('created')
+            },
+            beforeMount() {
+                console.log('beforeMount')
+            },
+            mounted() {
+                console.log('mounted')
+            },
+            beforeUpdate(){
+                console.log('beforedate')
+            },
+            updated() {
+                console.log()
+            },
+            beforeDestory() {
+                console.log('beforeDestory')
+
+            },
+            destoryed() {
+                console.log('destory')
+            }
+        })
+    </script>
+</body>
+</html>

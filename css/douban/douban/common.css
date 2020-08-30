@@ -286,6 +286,81 @@ a{
 
 
 
-
-
-
+.section{
+  padding: 10px 0;
+  margin-bottom: 30px;
+  min-height: 200px;
+}
+.section .wrapper{
+  zoom:1;
+}
+.wrapper{
+  width: 950px;
+  margin: 0 auto;
+}
+.section .wrapper::before, .section .wrapper::after{
+  content: "\0020";
+  display:block;
+  clear:both;
+}
+.section .side{
+  margin-left: 30px;
+  width: 256px;
+  float: right;
+}
+#anony-sns .online ul{
+  margin-top: -4px;
+}
+ul, ol{
+  list-style: none;
+}
+.mod{
+  margin-bottom: 30px;
+}
+.rec_topics{
+  margin-bottom: 15px;
+  line-height: 1;
+}
+#anony-sns .online li {
+  margin-top: 10px;
+  color:#999;
+}
+.mod::after{
+  content: '\0200';
+  display: block;
+  clear: both;
+}
+.section .main{
+  zoom:1;
+  overflow: hidden;
+}
+#anony-sns .albums {
+  letter-spacing: -0.31em;
+  font-size: 0;
+  color:#999;
+  margin-right: 30px;
+  width: 352px;
+  float: left;
+}
+#anony-sns .albums ul {
+  margin: -10px 0 0 -10px;
+}
+#anony-sns .albums li {
+  margin: 10px 0 0 10px;
+  font-size: 12px;
+  vertical-align: top;
+  width: 170px;
+  word-spacing: normal;
+  letter-spacing: normal;
+  zoom: 1;
+  display: inline-block;
+}
+#anony-sns .albums .pic{
+  white-space: nowrap;
+  vertical-align: middle;
+  overflow: hidden;
+  min-height: 170px;
+  width: 170px;
+  zoom: 1;
+  display: inline-block;
+}
