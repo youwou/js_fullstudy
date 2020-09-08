@@ -365,5 +365,12 @@ ul, ol{
   display: inline-block;
 }
 #anony-sns .notes {
-
+  color:#666;
+  zoom:1;
+  overflow: hidden;
+}
+.wrapper::after{
+  clear:both;
+  display: block;
+  content:"\0020"
 }

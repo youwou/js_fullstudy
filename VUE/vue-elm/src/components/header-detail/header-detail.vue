@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="header-title">
+    <div class="header-detail">
         <div class="detail-wrapper clear-fix">
             <div class="detail-main">
                 <h1 class="name">按时收费</h1>
