@@ -11,13 +11,13 @@
         <ul>
           <li @click="showToast">
             <router-link to="">
-              <i class="iconfont">&#xe911;</i>
+              <i class="iconfont">&#xe783;</i>
               <span>个人中心</span>
             </router-link>
           </li>
           <li>
-            <router-link to="">
-              <i class="iconfont">&#xe911;</i>
+            <router-link to="/user">
+              <i class="iconfont">&#xe783;</i>
               <span>个人中心</span>
             </router-link>
           </li>
@@ -39,17 +39,17 @@ export default {
     ...mapGetters(['showSidebar'])
   },
   methods: {
-      hidebar() {
-          this.$store.dispatch('setShowSidebar',false)
-      },
-      showToast() {
-          
-      }
+    hidebar() {
+      this.$store.dispatch('setShowSidebar', false)
+    },
+    showToast() {
+      this.$toast('该功能暂未开放...', 'top')
+    }
   }
 }
 </script>
 <style lang="stylus" scoped>
-@import "../assets/css/function.stylus"
+@import "../assets/css/function"
 .sidebar 
   color #e8e8e8
   .sidebar-con 

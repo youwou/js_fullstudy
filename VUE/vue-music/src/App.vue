@@ -1,38 +1,44 @@
 <template>
   <div id="app">
     <v-header>
-      <i class="iconfont" slot="left-icon">&#xe96d;</i>
+      <i class="iconfont" slot="left-icon">&#xe617;</i>
       <span slot="content">我的音乐</span>
-      <i class="iconfont" slot="right-icon">&#xe911;</i>
+      <i class="iconfont" slot="right-icon">&#xe783;</i>
     </v-header>
-    <!-- <router-view/> -->
+    <v-tab></v-tab>
 
-    <!-- mune -->
-  <v-sidebar></v-sidebar>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
+
+    <!-- menu -->
+    <v-sidebar></v-sidebar>
   </div>
 </template>
 
 <script>
 import header from '@/components/header'
 import sidebar from '@/components/sidebar'
+import tab from '@/components/tab'
 
 export default {
   components: {
     'v-header': header,
-    'v-sidebar': sidebar
+    'v-sidebar': sidebar,
+    'v-tab': tab
   }
 }
 </script>
 
 <style lang="stylus">
 @font-face {
-  font-family: 'iconfont';  /* project id 2052911 */
-  src: url('//at.alicdn.com/t/font_2052911_reynkiyg3ym.eot');
-  src: url('//at.alicdn.com/t/font_2052911_reynkiyg3ym.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_2052911_reynkiyg3ym.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_2052911_reynkiyg3ym.woff') format('woff'),
-  url('//at.alicdn.com/t/font_2052911_reynkiyg3ym.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_2052911_reynkiyg3ym.svg#iconfont') format('svg');
+  font-family: 'iconfont';  /* project id 2053031 */
+  src: url('//at.alicdn.com/t/font_2053031_m4ldxlva9vc.eot');
+  src: url('//at.alicdn.com/t/font_2053031_m4ldxlva9vc.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2053031_m4ldxlva9vc.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2053031_m4ldxlva9vc.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2053031_m4ldxlva9vc.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2053031_m4ldxlva9vc.svg#iconfont') format('svg');
 }
 .iconfont{
   font-family:"iconfont" !important;

@@ -14,18 +14,19 @@
 
 <script>
 // import { mapActions } from 'vuex'
+
 export default {
   methods: {
     // ...mapActions(['setShowSidebar']),
     menuShow() {
-      this.$store.dispatch('setShowSidebar',true)
+      this.$store.dispatch('setShowSidebar', true)
     }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-@import '../assets/css/function.stylus';
+@import '../assets/css/function.styl';
 .header
   height px2rem(88)
   line-height px2rem(88)
