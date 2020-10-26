@@ -1,0 +1,19 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+html body {
+  line-height: 1.6;
+  font-family: -apple-system-font, "Helvatica Neua", "pingFang SC", "Hiragino SanGB" "Microsoft YaHei";
+}
+html * {
+  margin: 0;
+  padding: 0;
+}
+html a mig {
+  border: 0;
+}
+html a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

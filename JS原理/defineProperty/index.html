@@ -13,7 +13,25 @@
 
 
     <script>
-        
+        const data = {
+            text:'hello world'
+        }
+        const input = document.getElementById('input')
+        const span = document.getElementById('span')
+//数据劫持
+Object.defineProperty(data,'text',{
+    get () {
+        console.log('获取数据')
+    },
+    set(newVal) {
+        input.value = newVal
+        span.innerHTML = newVal
+    }
+})
+
+        input.addEventListener('keyup',function(e) {
+            data.text = e.target.value
+        })
     </script>
 </body>
 </html>
